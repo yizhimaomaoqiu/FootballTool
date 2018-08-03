@@ -155,6 +155,7 @@
 		B430980B210746010023D0DE /* UIView+WZCViewCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = B4309802210746010023D0DE /* UIView+WZCViewCategory.m */; };
 		B430980C210746010023D0DE /* UIBezierPath+LxThroughPointsBezier.m in Sources */ = {isa = PBXBuildFile; fileRef = B4309803210746010023D0DE /* UIBezierPath+LxThroughPointsBezier.m */; };
 		B430980D210746010023D0DE /* PopoverView.m in Sources */ = {isa = PBXBuildFile; fileRef = B4309808210746010023D0DE /* PopoverView.m */; };
+		B483ED992113EC35006EDE6B /* SCChartCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B483ED972113EC34006EDE6B /* SCChartCell.m */; };
 		B4D2EC7421096E7100FBFECE /* data.json in Resources */ = {isa = PBXBuildFile; fileRef = B4D2EC7321096E7100FBFECE /* data.json */; };
 /* End PBXBuildFile section */
 
@@ -443,6 +444,8 @@
 		B4309806210746010023D0DE /* PopoverView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PopoverView.h; sourceTree = "<group>"; };
 		B4309807210746010023D0DE /* PopoverViewCompatibility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PopoverViewCompatibility.h; sourceTree = "<group>"; };
 		B4309808210746010023D0DE /* PopoverView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PopoverView.m; sourceTree = "<group>"; };
+		B483ED972113EC34006EDE6B /* SCChartCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCChartCell.m; sourceTree = "<group>"; };
+		B483ED982113EC34006EDE6B /* SCChartCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCChartCell.h; sourceTree = "<group>"; };
 		B4D2EC7321096E7100FBFECE /* data.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = data.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -879,6 +882,8 @@
 				B43097F9210745DE0023D0DE /* QuXian_VC.m */,
 				4B2A16BB1F96DB6600746DC2 /* Two_VC.h */,
 				4B2A16BC1F96DB6600746DC2 /* Two_VC.m */,
+				B483ED982113EC34006EDE6B /* SCChartCell.h */,
+				B483ED972113EC34006EDE6B /* SCChartCell.m */,
 				84ECAE07207AF8BA00D3F0BF /* Three_VC.h */,
 				84ECAE08207AF8BA00D3F0BF /* Three_VC.m */,
 				84ECAE0A207AF8C500D3F0BF /* Four_VC.h */,
@@ -1248,6 +1253,7 @@
 				4B2A174B1F96DF8400746DC2 /* CDFInitialsAvatar.m in Sources */,
 				4B2A17C41F96E1C000746DC2 /* UIImage+EMWebP.m in Sources */,
 				4B2A17481F96DF0600746DC2 /* LeafletsCallbackView.m in Sources */,
+				B483ED992113EC35006EDE6B /* SCChartCell.m in Sources */,
 				4B2A17921F96E11E00746DC2 /* NSBundle+MJRefresh.m in Sources */,
 				4B2A16C41F96DD4A00746DC2 /* UITableView+SDAutoTableViewCellHeight.m in Sources */,
 				4B2A17121F96DD7900746DC2 /* UIWebView+AFNetworking.m in Sources */,

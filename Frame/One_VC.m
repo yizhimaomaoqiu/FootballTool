@@ -15,6 +15,51 @@
 @end
 
 @implementation One_VC
+
+- (void)peilvlue{
+    
+    UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"赔付率计算" message:@"填写北单的主平客, 和竞彩的主平客" preferredStyle:UIAlertControllerStyleAlert];
+    [alertController addTextFieldWithConfigurationHandler:^(UITextField * _Nonnull textField) {
+        textField.keyboardType =  UIKeyboardTypeNumberPad;
+    }];
+    [alertController addTextFieldWithConfigurationHandler:^(UITextField * _Nonnull textField) {
+        textField.keyboardType =  UIKeyboardTypeNumberPad;
+    }];
+    [alertController addTextFieldWithConfigurationHandler:^(UITextField * _Nonnull textField) {
+        textField.keyboardType =  UIKeyboardTypeNumberPad;
+    }];
+    [alertController addTextFieldWithConfigurationHandler:^(UITextField * _Nonnull textField) {
+        textField.keyboardType =  UIKeyboardTypeNumberPad;
+    }];
+    [alertController addTextFieldWithConfigurationHandler:^(UITextField * _Nonnull textField) {
+        textField.keyboardType =  UIKeyboardTypeNumberPad;
+    }];
+    [alertController addTextFieldWithConfigurationHandler:^(UITextField * _Nonnull textField) {
+        textField.keyboardType =  UIKeyboardTypeNumberPad;
+    }];
+    [alertController addAction:[UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
+        
+    }]];
+    [alertController addAction:[UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+        NSMutableArray *arr= [NSMutableArray array];
+        for (UITextField *textFie in alertController.textFields) {
+            [arr addObject:textFie.text];
+        }
+        CGFloat zhupeifulv = 1.0 / [arr[0] floatValue] * [arr[3] floatValue];
+        CGFloat pingpeifulv = 1.0 / [arr[1] floatValue] * [arr[4] floatValue];
+        CGFloat kepeifulv = 1.0 / [arr[2] floatValue] * [arr[5] floatValue];
+        NSString *result = [NSString stringWithFormat:@"%%%.2f\n%%%.2f\n%%%.2f", zhupeifulv * 100, pingpeifulv * 100, kepeifulv * 100];
+        
+        UIAlertController *alC = [UIAlertController alertControllerWithTitle:@"结果" message:result preferredStyle:UIAlertControllerStyleAlert];
+        [alC addAction:[UIAlertAction actionWithTitle:@"好的" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+            
+        }]];
+        [self presentViewController:alC animated:YES completion:nil];
+    }]];
+    [self presentViewController:alertController animated:YES completion:nil];
+    
+}
+
 //添加第一步
 - (void)action{
     UIAlertController *alC = [UIAlertController alertControllerWithTitle:@"场次" message:nil preferredStyle:UIAlertControllerStyleAlert];
@@ -247,6 +292,9 @@
         NSDictionary *dic = @{@"data":self.dataArr};
         [dic.dicToJson writeToFile:path atomically:YES encoding:NSUTF8StringEncoding error:nil];
         NSLog(@"path = %@", path);
+    }]];
+    [alC addAction:[UIAlertAction actionWithTitle:@"北单赔付率计算" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+        [self peilvlue];
     }]];
     [alC addAction:[UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
         

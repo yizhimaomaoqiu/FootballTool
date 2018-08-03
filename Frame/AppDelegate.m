@@ -29,21 +29,21 @@
     [BANetManager sharedBANetManager].isCookie = YES;
     
     One_VC *homepage = [[One_VC  alloc]init];
-    Three_VC *one = [[Three_VC alloc]init];
-    Two_VC *two = [[Two_VC  alloc]init];
+    Three_VC *two = [[Three_VC alloc]init];
+    Two_VC *one = [[Two_VC  alloc]init];
     Four_VC *three = [[Four_VC  alloc]init];
     
     UINavigationController *homepageNc = [[UINavigationController alloc]initWithRootViewController:homepage];
-    UINavigationController *pageTwoNC = [[UINavigationController alloc]initWithRootViewController:two];
+    UINavigationController *pageTwoNC = [[UINavigationController alloc]initWithRootViewController:one];
     
     [self setupOneChildViewController:homepageNc
                                 image:[[UIImage imageNamed:@"pageone_ns"]imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]
                         selectedImage:[[UIImage imageNamed:@"pageone_s"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]
                                 title:nil];
-//    [self setupOneChildViewController:pageOneNC
-//                                image:[[UIImage imageNamed:@"pagetwo_ns"]imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]
-//                        selectedImage:[[UIImage imageNamed:@"pagetwo_s"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]
-//                                title:nil];
+    [self setupOneChildViewController:pageTwoNC
+                                image:[[UIImage imageNamed:@"pagetwo_ns"]imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]
+                        selectedImage:[[UIImage imageNamed:@"pagetwo_s"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]
+                                title:nil];
 //    [self setupOneChildViewController:pageTwoNC
 //                                image:[[UIImage imageNamed:@"pagethree_ns"]imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]
 //                        selectedImage:[[UIImage imageNamed:@"pagethree_s"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]
@@ -54,7 +54,7 @@
 //                                title:nil];
     
     self.tabBarC = [UITabBarController new];
-    self.tabBarC.viewControllers = [NSArray arrayWithObjects:homepageNc, nil];
+    self.tabBarC.viewControllers = [NSArray arrayWithObjects:homepageNc, pageTwoNC, nil];
     self.tabBarC.tabBar.barTintColor = [UIColor whiteColor];
     
     [self.window setRootViewController:self.tabBarC];
